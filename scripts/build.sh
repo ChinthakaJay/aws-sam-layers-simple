@@ -73,13 +73,17 @@ process_directory() {
 }
 
 # Process all function directories
-find "$FUNCTIONS_DIR" -mindepth 1 -maxdepth 1 -type d | while read -r dir; do
-    process_directory "$dir"
+for dir in "$FUNCTIONS_DIR"/*; do
+    if [ -d "$dir" ]; then
+        process_directory "$dir"
+    fi
 done
 
 # Process all layer directories
-find "$LAYERS_DIR" -mindepth 1 -maxdepth 1 -type d | while read -r dir; do
-    process_directory "$dir"
+for dir in "$LAYERS_DIR"/*; do
+    if [ -d "$dir" ]; then
+        process_directory "$dir"
+    fi
 done
 
 # Print summary
