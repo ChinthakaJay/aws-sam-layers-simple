@@ -1,0 +1,1 @@
+export { importInvestorsHandler } from "./src/import-investors";
