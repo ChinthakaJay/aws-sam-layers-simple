@@ -1,0 +1,5 @@
+# Ignore all .js files
+**/*.js
+
+# Ignore all node_modules directories
+**/node_modules/

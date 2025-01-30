@@ -1,0 +1,1 @@
+export { deleteEntitiesHandler } from "./src/delete-entities";
